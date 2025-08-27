@@ -1,0 +1,50 @@
+:root {
+  // font-family: Roboto, sans-serif;
+  // line-height: 1.5;
+  // font-weight: 400;
+  // @include font(10px, 400, 150%, 0%, $color-font-gold);
+
+  /* color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+$color-dark: #030303;
+$color-light: rgba(255, 255, 255, 1);
+$color-dark-red: #710707;
+$color-font-gold: #9d8665;
+
+@mixin font(
+  $size,
+  $line-height: normal,
+  $letter-spacing: normal,
+  $color: inherit
+) {
+  font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  font-size: $size;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  color: $color;
+}
+
+a {
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: $color-font-gold;
+}
+
+body {
+  @include font(16px, 1.5, 10%, $color-dark-red);
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
