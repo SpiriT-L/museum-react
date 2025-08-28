@@ -1,0 +1,51 @@
+@use '../../index.scss' as *;
+
+header {
+  width: 100vw;
+  height: 9.375rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: $color-bg-dark;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  @include font(28px, 100%, 0.3125rem, $color-light);
+  &::before {
+    content: '';
+    width: 59px;
+    height: 48px;
+    background-image: url('../../assets/logo.svg');
+    background-repeat: no-repeat;
+    background-size: 59px 48px;
+    margin-right: 20px;
+  }
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
+  gap: 55px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  color: $color-light;
+  cursor: pointer;
+}
+
+a {
+  color: $color-light;
+}
