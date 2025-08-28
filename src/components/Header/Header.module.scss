@@ -44,8 +44,13 @@ header {
 .item {
   color: $color-light;
   cursor: pointer;
-}
-
-a {
-  color: $color-light;
+  a {
+    color: $color-light;
+  }
+  &:hover {
+    color: $color-font-gold;
+  }
+  &.active {
+    color: $color-font-gold;
+  }
 }
